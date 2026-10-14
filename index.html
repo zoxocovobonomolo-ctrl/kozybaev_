@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Цифровой портрет академика М.К. Козыбаева</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -321,7 +322,7 @@
             <!-- Quiz Questions Container -->
             <div id="quizContent" class="hidden space-y-6">
                 <div class="flex justify-between items-center text-xs text-slate-400">
-                    <span id="quizProgress">Вопрос 1 из 3</span>
+                    <span id="quizProgress">Вопрос 1 из 10</span>
                     <span id="quizScoreText">Баллы: 0</span>
                 </div>
 
@@ -357,17 +358,20 @@
                 <div class="lg:col-span-7 bg-navy-900 rounded-2xl p-4 border border-amber-500/20 space-y-3">
                     <div class="relative aspect-video rounded-xl overflow-hidden bg-black flex items-center justify-center border border-slate-800">
                         <iframe class="w-full h-full" 
-                            src="https://www.youtube.com/embed/TkIbQvRXYOI?rel=0&modestbranding=1" 
+                            src="https://www.youtube.com/embed/TkIbQvRXYOI?rel=0&modestbranding=1&playsinline=1" 
                             title="Видеоэссе: Память академика М.К. Козыбаева" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowfullscreen
-                            referrerpolicy="strict-origin-when-cross-origin">
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            loading="lazy">
                         </iframe>
                     </div>
                     <div class="flex justify-between items-center text-xs text-slate-400 px-1">
                         <span><i class="fa-solid fa-circle-play text-amber-400 mr-1"></i> Видеоэссе: Память академика</span>
-                        <span>Хронометраж: ~3 мин</span>
+                        <a href="https://www.youtube.com/watch?v=TkIbQvRXYOI" target="_blank" class="text-amber-400 hover:underline">
+                            Открыть на YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -565,14 +569,49 @@
                 correct: 0
             },
             {
+                q: "В каком году родился М.К. Козыбаев?",
+                options: ["1929", "1931", "1935", "1940"],
+                correct: 1
+            },
+            {
+                q: "В каком году М.К. Козыбаев окончил КазГУ им. Кирова?",
+                options: ["1950", "1953", "1957", "1960"],
+                correct: 1
+            },
+            {
+                q: "В каком году М.К. Козыбаев защитил кандидатскую диссертацию?",
+                options: ["1960", "1967", "1970", "1973"],
+                correct: 1
+            },
+            {
                 q: "В каком году М.К. Козыбаев защитил докторскую диссертацию?",
                 options: ["1965", "1973", "1980", "1991"],
                 correct: 1
             },
             {
+                q: "В каком году М.К. Козыбаев стал директором Института истории НАН РК?",
+                options: ["1985", "1989", "1991", "1995"],
+                correct: 1
+            },
+            {
+                q: "В каком году М.К. Козыбаев стал лауреатом Государственной премии РК?",
+                options: ["1991", "1995", "1998", "2000"],
+                correct: 2
+            },
+            {
                 q: "Сколько научных трудов опубликовал М.К. Козыбаев?",
                 options: ["Более 100", "Более 300", "Более 500", "Более 800"],
                 correct: 3
+            },
+            {
+                q: "Сколько фундаментальных монографий написал М.К. Козыбаев?",
+                options: ["Более 10", "Более 20", "Более 30", "Более 50"],
+                correct: 2
+            },
+            {
+                q: "В каком году ушёл из жизни академик М.К. Козыбаев?",
+                options: ["1998", "2000", "2002", "2005"],
+                correct: 2
             }
         ];
 
